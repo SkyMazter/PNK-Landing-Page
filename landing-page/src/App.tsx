@@ -1,8 +1,8 @@
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import { CiMenuBurger } from "react-icons/ci";
-import logo from "./assets/ctny_transparent_logo.png";
 import { Link } from "react-router-dom";
 import Background from "./components/Background.tsx";
+import P5Practice from "./components/P5Practice.tsx";
 
 const App = () => {
   return (
@@ -14,7 +14,8 @@ const App = () => {
         overflow: "hidden",
       }}
     >
-      <Background></Background>
+      {/* <Background></Background> */}
+      <P5Practice></P5Practice>
       <Container
         style={{
           zIndex: 10,
@@ -56,14 +57,6 @@ const App = () => {
             </h1>
           </Col>
         </Row>
-        {/* <Row>
-          <Col xs={6}>
-            <Image src={logo} fluid></Image>
-          </Col>
-          <Col xs={6}>
-            <Image></Image>
-          </Col>
-        </Row> */}
         <Row>
           <Col
             xs={12}

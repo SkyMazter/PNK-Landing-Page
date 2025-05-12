@@ -28,6 +28,7 @@ const Background = () => {
 
         move() {
           this.y += this.speedY;
+          this.x -= this.speedX;
           if (this.y > p.height || this.y <= 0) {
             this.y = 0;
             this.x = p.random(p.width);
