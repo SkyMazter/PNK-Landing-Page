@@ -9,6 +9,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    children: [{
+      path: '/',
+      element: <div className="bg-primary">Hello World</div>
+    }]
   },
 ]);
 
