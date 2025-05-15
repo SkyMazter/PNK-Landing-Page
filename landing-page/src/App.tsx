@@ -17,8 +17,8 @@ const App = () => {
 
   return (
     <div className="main">
-      <Background/>
-      
+      <Background />
+
       <div className="container share-tech-regular d-flex flex-column-reverse">
         <div className="row nav-bar justify-content-around">
           {navItems.map((item) => (
@@ -29,14 +29,16 @@ const App = () => {
               } `}
               onClick={() => setNavOp(item)}
             >
-              {navOp === item ? <p className="pe-1">={'>'}</p> : null}
+              {navOp === item ? <p className="pe-1">={">"}</p> : null}
               <p>{item}</p>
             </div>
           ))}
         </div>
+        <Outlet />
+        <div className="mobile-nav">
+          <button>Menu</button>
+        </div>
       </div>
-
-      <Outlet/>
     </div>
   );
 };
