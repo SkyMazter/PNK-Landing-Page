@@ -21,8 +21,7 @@
   display: flex;
 }
 
-
-.mobile-nav{
+.mobile-nav {
   display: none;
 }
 
@@ -30,7 +29,50 @@
   .nav-bar {
     display: none !important;
   }
-  .mobile-nav{
+  .mobile-nav {
     display: block !important;
+  }
+}
+
+.header {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+}
+
+.typing-animation {
+  animation: typing 2s steps(26) 1 normal both,
+    cursor 500ms steps(44) infinite normal;
+}
+
+.deleting-animation {
+  animation: deleting 2s steps(26) 2s 1 reverse both,
+    cursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12rem;
+  }
+}
+
+@keyframes deleting {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12rem;
+  }
+}
+
+@keyframes cursor {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
   }
 }
