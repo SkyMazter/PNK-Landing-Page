@@ -70,7 +70,7 @@
 
 @keyframes cursor {
   from {
-    border-right-color: black;
+    border-right-color:  rgb(34, 182, 34);
   }
   to {
     border-right-color: transparent;

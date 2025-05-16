@@ -58,7 +58,7 @@ const About = () => {
         <h4>What can I do here?</h4>
         <p>
           With this being our now little private network, Imagine yourself being in a space
-          completely separated from the Internet,That doesn’t meant there’s nothing
+          completely separated from the Internet. That doesn’t meant there’s nothing
           to do here. In the top right corner you will see a nice selection of
           applications and pages you can visit and mess around with. As well as
           that feel free to explore all the posts we have in the bottom section
