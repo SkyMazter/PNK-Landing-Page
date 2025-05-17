@@ -5,12 +5,19 @@ html {
   overflow: hidden;
 }
 
-.main {
+.window {
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
+
+.main{
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
 
 .background {
   position: absolute;
@@ -21,12 +28,16 @@ html {
   z-index: 2;
   pointer-events: none;
 }
+.share-tech-regular {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .container {
   color: white;
   position: relative;
   z-index: 10;
-  height: 100%;
 }
 
 .about {
@@ -37,15 +48,18 @@ html {
   padding: 2rem;
   border-radius: 1rem;
   border: 0.5px rgb(104, 99, 99) solid;
+  position: relative;
+  z-index: 10;
 }
 @media (max-width: 768px) {
   .about {
     margin-left: 5%;
     margin-right: 5%;
     overflow: scroll;
+    padding: 0.7rem;
   }
 
-  .container {
+  .main {
     overflow: scroll;
   }
 }

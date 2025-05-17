@@ -9,7 +9,7 @@ const About = () => {
   const phrases = [
     "Welcome!",
     "Buenos Dias!",
-    "PNK Who?",
+    "Who are you?",
     "I See You...",
     "REad ME!",
   ];
@@ -41,7 +41,7 @@ const About = () => {
   }, [index]);
 
   return (
-    <div className="container d-flex align-items-center">
+    <div className="container my-lg-5 d-flex align-items-center">
       <div className="about">
         <h1 className=" typing-animation header " ref={headerRef}>
           {phrase}

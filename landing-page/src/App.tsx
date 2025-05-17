@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Background from "./components/Background.tsx";
 import { Outlet } from "react-router-dom";
+import MobileNav from "./components/MobileNav.tsx";
 
 const App = () => {
   const navItems: string[] = [
@@ -13,13 +14,15 @@ const App = () => {
     "Archive",
   ];
 
+
+
   const [navOp, setNavOp] = useState<string>("PNKv4");
 
   return (
-    <div className="main">
+    <div className="window">
       <Background />
 
-      <div className="container share-tech-regular d-flex flex-column-reverse">
+      <div className="main container share-tech-regular d-flex justify-content-around flex-column-reverse">
         <div className="row nav-bar justify-content-around">
           {navItems.map((item) => (
             <div
@@ -35,9 +38,7 @@ const App = () => {
           ))}
         </div>
         <Outlet />
-        <div className="mobile-nav">
-          <button>Menu</button>
-        </div>
+          <MobileNav/>
       </div>
     </div>
   );
