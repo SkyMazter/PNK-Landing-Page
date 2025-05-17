@@ -64,6 +64,7 @@ const About = () => {
           that feel free to explore all the posts we have in the bottom section
           of this page 😆
         </p>
+        
       </div>
     </div>
   );

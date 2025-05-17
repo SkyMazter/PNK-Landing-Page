@@ -1,43 +1,181 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.window {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.main{
-  height: 100%;
-  position: relative;
-  z-index: 10;
-}
-
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
 .share-tech-regular {
   font-family: "Share Tech", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.container {
-  color: white;
+/*Creates Context Stack & set the p5 background as its base*/
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+/*Places Content above background*/
+.main {
   position: relative;
-  z-index: 10;
+  z-index: 2;
+  color: white;
+  height: 100%;
+}
+
+.window {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  /* overflow-x: scroll; */
+}
+
+#root {
+  margin: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.bttn {
+  background-color: rgba(49, 49, 49, 0.82);
+  color: rgb(34, 182, 34);
+  padding: 0.5rem;
+  border: 0.5px rgb(104, 99, 99) solid;
+  border-radius: 0.5rem;
+  margin-left: 3%;
+}
+
+.bttn:active {
+  background-color: rgba(200, 200, 200, 0.88);
+}
+
+/*Nav Bar (Desktop) properties*/
+.active {
+  color: rgb(34, 182, 34);
+}
+
+.inactive {
+  color: white;
+}
+
+.nav-item:hover {
+  color: rgb(34, 182, 34);
+  transition: 1s ease-out;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+/*Mobile Nav Properties*/
+.mobile-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.title {
+  margin-right: 3%;
+  color: rgb(34, 182, 34);
+}
+.mobile-menu {
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  z-index: 12;
+  top: 0px;
+  left: 0px;
+}
+
+.closed {
+  display: none;
+}
+
+.open {
+  display: block;
+  transition: opacity ease-in-out 1s;
+  height: 100%;
+  width: 100%;
+  animation: open-menu 0.5s 1 normal both;
+}
+
+.open * {
+  animation: fade-in 0.3s 1 normal both;
+}
+
+@keyframes open-menu {
+  from {
+    height: 0%;
+    width: 0%;
+    opacity: 0;
+  }
+
+  to {
+    height: 100%;
+    width: 100%;
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+/*Typing & Deleting Animation*/
+
+.header {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  color: rgb(34, 182, 34);
+}
+
+.typing-animation {
+  animation: typing 2s steps(26) 1 normal both,
+    cursor 500ms steps(44) infinite normal;
+}
+
+.deleting-animation {
+  animation: deleting 2s steps(26) 2s 1 reverse both,
+    cursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12rem;
+  }
+}
+
+@keyframes deleting {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12rem;
+  }
+}
+
+@keyframes cursor {
+  from {
+    border-right-color: rgb(34, 182, 34);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 .about {
@@ -48,18 +186,22 @@ html {
   padding: 2rem;
   border-radius: 1rem;
   border: 0.5px rgb(104, 99, 99) solid;
-  position: relative;
-  z-index: 10;
 }
+
 @media (max-width: 768px) {
   .about {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
     overflow: scroll;
     padding: 0.7rem;
   }
-
-  .main {
-    overflow: scroll;
+  .nav-bar {
+    display: none !important;
+  }
+  .mobile-nav {
+    display: flex !important;
+  }
+  .container {
+    font-size: 0.9rem;
   }
 }

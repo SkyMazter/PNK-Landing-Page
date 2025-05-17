@@ -14,8 +14,6 @@ const App = () => {
     "Archive",
   ];
 
-
-
   const [navOp, setNavOp] = useState<string>("PNKv4");
 
   return (
@@ -38,7 +36,8 @@ const App = () => {
           ))}
         </div>
         <Outlet />
-          <MobileNav/>
+        <MobileNav />
+        <div className="header"> <h3>PNKv4</h3></div>
       </div>
     </div>
   );
