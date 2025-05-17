@@ -4,6 +4,12 @@
   font-style: normal;
 }
 
+.scroll{
+  overflow-x: scroll;
+  padding-top: 250px;
+  padding-bottom: 50px;
+}
+
 /*Creates Context Stack & set the p5 background as its base*/
 .background {
   position: absolute;
@@ -73,6 +79,9 @@ html {
   display: flex;
 }
 
+.main-title {
+  color: rgb(34, 182, 34);
+}
 /*Mobile Nav Properties*/
 .mobile-nav {
   display: none;
@@ -203,5 +212,8 @@ html {
   }
   .container {
     font-size: 0.9rem;
+  }
+  .main-title{
+    display: none;
   }
 }

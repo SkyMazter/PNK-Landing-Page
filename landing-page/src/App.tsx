@@ -37,7 +37,7 @@ const App = () => {
         </div>
         <Outlet />
         <MobileNav />
-        <div className="header"> <h3>PNKv4</h3></div>
+        <div className="main-title"> <h3>PNKv4</h3></div>
       </div>
     </div>
   );
