@@ -20,7 +20,12 @@ const App = () => {
     <div className="window">
       <Background />
 
-      <div className="main container share-tech-regular d-flex justify-content-around flex-column-reverse">
+      <div className="main container share-tech-regular">
+        <MobileNav />
+        <div className="main-title">
+          <h3>PNKv4</h3>
+        </div>
+        <Outlet />
         <div className="row nav-bar justify-content-around">
           {navItems.map((item) => (
             <div
@@ -35,9 +40,6 @@ const App = () => {
             </div>
           ))}
         </div>
-        <Outlet />
-        <MobileNav />
-        <div className="main-title"> <h3>PNKv4</h3></div>
       </div>
     </div>
   );
