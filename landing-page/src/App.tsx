@@ -3,6 +3,7 @@ import { useState } from "react";
 import Background from "./components/Background.tsx";
 import { Outlet } from "react-router-dom";
 import MobileNav from "./components/MobileNav.tsx";
+import MatrixRain from "./components/MatrixRain.tsx";
 
 const App = () => {
   const navItems: string[] = [
@@ -18,12 +19,11 @@ const App = () => {
 
   return (
     <div className="window">
-      <Background />
-
+      <MatrixRain />
       <div className="main container share-tech-regular">
         <MobileNav />
         <div className="main-title">
-          <h3>PNKv4</h3>
+          <h3>{navOp}</h3>
         </div>
         <Outlet />
         <div className="row nav-bar justify-content-around">
