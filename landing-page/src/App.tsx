@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import Background from "./components/Background.tsx";
+// import Background from "./components/Background.tsx";
 import { Outlet } from "react-router-dom";
 import MobileNav from "./components/MobileNav.tsx";
 import MatrixRain from "./components/MatrixRain.tsx";
