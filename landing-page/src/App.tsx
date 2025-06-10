@@ -8,14 +8,21 @@ import MatrixRain from "./components/MatrixRain.tsx";
 const App = () => {
   const navItems: string[] = [
     "PNKv4",
-    "About Us",
-    "Unify",
-    "Etherpad",
+    "Droppy",
     "HackChat",
-    "Archive",
+    "Etherpad",
+    "Unifi",
   ];
 
   const [navOp, setNavOp] = useState<string>("PNKv4");
+
+  const navLinks: Record<string, string> = {
+    PNKv4: "http://pnkv3:81",
+    Droppy: "http://pnkv3:8989/",
+    HackChat: "http://pnkv3:3000",
+    Etherpad: "http://pnkv3:9001",
+    Unifi: "https://pnkv3:8443/",
+  };
 
   return (
     <div className="window">
@@ -26,6 +33,7 @@ const App = () => {
           <h3>{navOp}</h3>
         </div>
         <Outlet />
+
         <div className="row nav-bar justify-content-around">
           {navItems.map((item) => (
             <div
@@ -36,7 +44,12 @@ const App = () => {
               onClick={() => setNavOp(item)}
             >
               {navOp === item ? <p className="pe-1">={">"}</p> : null}
-              <p>{item}</p>
+              <a
+                href={navLinks[item]}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {item}
+              </a>
             </div>
           ))}
         </div>
