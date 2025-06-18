@@ -18,6 +18,14 @@ const MobileNav = () => {
     "Close_Menu",
   ];
 
+  const navLinks: Record<string, string> = {
+    PNKv4: "http://pnkv3:81",
+    Droppy: "http://pnkv3:8989/",
+    HackChat: "http://pnkv3:3000",
+    Etherpad: "http://pnkv3:9001",
+    Unifi: "https://pnkv3:8443/",
+  };
+
   const [navOp, setNavOp] = useState<string>("PNKv4");
 
   return (
@@ -31,24 +39,29 @@ const MobileNav = () => {
       <div className={`mobile-menu ${isOpen ? "open" : "closed"}`}>
         <div className="container px-5 py-3 d-flex flex-column align-items-start">
           <h3 className="header typing-animation">Select Destination</h3>
-          {navItems.map((item) => (
+          {navItems.map((navItem) => (
             <div
-              key={item}
+              key={navItem}
               className={`col nav-item d-flex justify-content-center ${
-                navOp === item ? "active" : ""
+                navOp === navItem ? "active" : ""
               } `}
               onClick={() => {
-                setNavOp(item);
+                setNavOp(navItem);
 
-                if (item === 'Close_Menu') {
-                  setNavOp("PNKv4")
+                if (navItem === "Close_Menu") {
+                  setNavOp("PNKv4");
                 }
 
                 handleMenuToggle();
               }}
             >
-              {navOp === item ? <p className="pe-1">={">"}</p> : null}
-              <p>{item}</p>
+              {navOp === navItem ? <p className="pe-1">={">"}</p> : null}
+              <a
+                href={navLinks[navItem]}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {navItem}
+              </a>
             </div>
           ))}
         </div>

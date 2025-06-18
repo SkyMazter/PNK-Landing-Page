@@ -6,13 +6,7 @@ const About = () => {
   const [phrase, setPhrase] = useState<string>("Welcome!");
   const [index, setIndex] = useState<number>(0);
 
-  const phrases = [
-    "Welcome!",
-    "Buenos Dias!",
-    "Who are you?",
-    "I See You...",
-    "REad ME!",
-  ];
+  const phrases = ["Welcome!", "I See You...", "REad ME!"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,19 +44,19 @@ const About = () => {
         <p>
           You are currently connected to our very first community network node!
           <br></br>
-          We are conducting this test run to see how well we are able to real
-          world traffic. As well as that we want to see how the community reacts
-          to the idea of a community network that is capable or providing them
-          with free internet.
+          We are conducting this test run to see how well we are able to reach
+          real world traffic and see how the community reacts to the idea of a
+          community network that is capable or providing them with free
+          internet.
         </p>
         <h4>What can I do here?</h4>
         <p>
-          With this being our now little private network, Imagine yourself being in a space
-          completely separated from the Internet. That doesn’t meant there’s nothing
-          to do here. In the top right corner you will see a nice selection of
-          applications and pages you can visit and mess around with. As well as
-          that feel free to explore all the posts we have in the bottom section
-          of this page 😆
+          With this being our own small private network, imagine yourself being
+          in a space completely separated from the Internet. That doesn’t mean
+          there’s nothing to do here. In the top right corner you will see a
+          nice selection of applications and pages you can visit. Please feel
+          free to explore all the posts we have in the bottom section of this
+          page.
         </p>
       </div>
     </div>
